@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "926478032086",
+    "project_id": "appdemo-61962",
+    "storage_bucket": "appdemo-61962.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:926478032086:android:e50e5f64d66883753e3d77",
+        "android_client_info": {
+          "package_name": "com.ulventech.appdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "926478032086-4kp0sctp3232129pe4ig7tecf7qq4t9l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCs6Iwa-9dK80uTS0BdeAipzSrT6S_SklE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "926478032086-4kp0sctp3232129pe4ig7tecf7qq4t9l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
