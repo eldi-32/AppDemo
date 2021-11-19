@@ -21,6 +21,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.firebase.remoteconfig.ktx.remoteConfig
+import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -42,11 +43,12 @@ class MainActivity : AppCompatActivity() {
             "font_color" to "#ff0000"
         )
 
-
-        val remoteConfig = FirebaseRemoteConfig.getInstance()
+        val remoteConfig = Firebase.remoteConfig
+        val configSettings = remoteConfigSettings {
+            minimumFetchIntervalInSeconds = 5
+        }
+        remoteConfig.setConfigSettingsAsync(configSettings)
         remoteConfig.setDefaultsAsync(defaults)
-
-
 
         remoteConfig.fetchAndActivate().addOnCompleteListener {
 
@@ -64,13 +66,6 @@ class MainActivity : AppCompatActivity() {
 
 
         }
-
-
-
-
-
-
-
 
         val crashButton = Button(this)
         crashButton.text = "Test Crash"
