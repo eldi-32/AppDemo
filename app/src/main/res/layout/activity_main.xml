@@ -27,4 +27,15 @@
         app:layout_constraintStart_toStartOf="@+id/login_button"
         app:layout_constraintTop_toBottomOf="@+id/login_button" />
 
+    <com.ulventech.appdemo.CustomDialogLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:description="This is description section"
+        app:imageView="@drawable/ic_baseline_notifications_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRemoteConfig"
+        app:title="This is title" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
