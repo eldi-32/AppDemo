@@ -3,6 +3,9 @@ plugins {
     id 'kotlin-android'
     id 'com.google.gms.google-services'
     id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+
 }
 
 android {
@@ -58,6 +61,18 @@ dependencies {
 //    implementation 'com.facebook.android:facebook-login:[8.1)'
 
     implementation 'com.facebook.android:facebook-android-sdk:latest.release'
+
+
+
+    // Hilt DI
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$httplogging_version"
+    implementation "com.google.code.gson:gson:$json_version"
 
     apply plugin: 'com.google.gms.google-services'
     apply plugin: 'com.google.firebase.crashlytics'

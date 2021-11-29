@@ -1,4 +1,4 @@
-package com.ulventech.appdemo
+package com.ulventech.appdemo.activities
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -19,9 +19,9 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.firebase.remoteconfig.ktx.remoteConfig
 import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
+import com.ulventech.appdemo.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -132,6 +132,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateUI(user: FirebaseUser?) {
         Log.d(TAG,"${user?.email}, ${user?.displayName}, ${user?.photoUrl}")
+        val intent = Intent(this,RepoActivity::class.java)
+        startActivity(intent)
     }
 
     companion object {
